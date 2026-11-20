@@ -19,25 +19,26 @@ ul,ol { padding-left:24px; }
 </head>
 <body>
 <h1>天气准 技术支持</h1>
-<p class="note">更新日期：2026年11月10日</p>
+<p class="note">更新日期：2026年11月19日</p>
 <p>欢迎使用天气准！本页面提供「天气准」APP（深圳市活力智汇科技有限公司开发运营）的使用说明、常见问题与反馈渠道。若您在使用过程中遇到问题，可直接查看下方对应条目，或通过页面末尾的邮箱联系我们。</p>
 
 <h3>一、应用简介</h3>
-<p>天气准是一款面向日常出行的天气查询工具，提供关注城市的实况天气、逐小时与多日预报、空气质量、生活指数及气象预警展示，支持城市与乡镇级别查询。</p>
+<p>天气准是一款面向日常出行的天气查询工具，提供关注城市的实况天气、逐小时与多日预报、空气质量、生活指数及气象预警展示，支持城市与乡镇级别查询；提供长辈速览大字模式、系统语音播报天气文字。</p>
 <p>本App<strong>无需注册账号，无会员、无内购、无广告弹窗</strong>。您可以在不授予定位权限的情况下，手动搜索并添加城市查看天气。</p>
 
 <h3>二、权限说明</h3>
 <ul>
 <li><strong>定位（可选）</strong>：用于自动确定您所在城市。仅申请“使用 App 期间”的位置，不申请后台定位；坐标只用于向气象服务商查询天气，不上传我方服务器。</li>
-<li><strong>通知（可选）</strong>：用于本地天气与降雨提醒。<strong>本App仅使用本地通知，不使用 APNs 远程推送</strong>；App 被完全关闭后，本地通知无法触发。</li>
+<li><strong>通知（可选）</strong>：用于本地天气与降雨提醒。<strong>本App仅使用本地通知，不使用 APNs 远程推送</strong>；App 被完全关闭后，不会主动拉取新天气数据，无法触发新预警提醒。</li>
 </ul>
 <p>设备权限不会默认开启，仅在您使用对应功能时弹窗申请；您可随时在系统设置中关闭，拒绝权限不影响其他功能的正常使用。本App<strong>不申请相册权限，不收集设备标识、IP 地址等统计信息，不接入任何统计或崩溃分析 SDK</strong>。</p>
+<p>语音播报采用 Apple 系统语音合成，不调用麦克风、不会录音，播报文字和语音不会上传我方服务器。长辈速览开关、已提醒预警标识仅保存在本机本地。</p>
 
 <h3>三、常见问题</h3>
 
 <div class="qa">
 <p class="q">1. 收不到天气提醒通知怎么办？</p>
-<p>答：本App仅支持本地通知，不支持远程推送。请依次确认：①系统设置 → 天气准 → 通知中已允许通知；②App 内对应城市的提醒开关已打开；③未开启“专注模式”或“定时摘要”拦截推送；④App 是否已被上滑彻底关闭——本地通知需要 App 在后台运行才能触发，完全关闭后不会提醒。此外，气象预警只有在气象部门正式发布后才会推送，无预警时段收不到消息属于正常情况。</p>
+<p>答：本App仅支持本地通知，不支持远程推送。请依次确认：①系统设置 → 天气准 → 通知中已允许通知；②App 内对应城市的提醒开关已打开；③未开启“专注模式”或“定时摘要”拦截推送；④App 是否已被上滑彻底关闭——App完全终止后不会主动获取新预警，无法产生提醒，仅App在前台/后台运行时，查询到新预警才生成本地提醒。此外，气象预警只有在气象部门正式发布后才会推送，无预警时段收不到消息属于正常情况。</p>
 </div>
 
 <div class="qa">
@@ -57,27 +58,37 @@ ul,ol { padding-left:24px; }
 
 <div class="qa">
 <p class="q">5. 添加的城市列表不见了？</p>
-<p>答：城市列表、温度单位、通知开关等设置均只保存在设备本地，不上传服务器。卸载App、清理App数据或更换设备后，这些内容会被清除，需要重新添加。建议在系统设置中保留App数据备份（iCloud 备份由 Apple 按其条款管理）。</p>
+<p>答：城市列表、温度单位、通知开关、长辈速览配置等设置均只保存在设备本地，不上传服务器。卸载App、清理App数据或更换设备后，这些内容会被清除，需要重新添加。建议在系统设置中保留App数据备份（iCloud 备份由 Apple 按其条款管理）。</p>
 </div>
 
 <div class="qa">
-<p class="q">6. 如何切换温度单位、调整显示？</p>
-<p>答：在App内“设置”页面可切换摄氏度与华氏度，并对显示字号进行调整。所有设置均保存在本机本地，卸载App后清除。</p>
+<p class="q">6. 缓存过期是什么意思，可以手动清理吗？</p>
+<p>答：App本地会缓存天气数据，约十分钟用于减少重复网络请求；超过24小时标记为过期，需要联网刷新。预警提醒摘要本地最多保存256条，7日后自动清理。您可以在设置页手动清除全部天气缓存。</p>
 </div>
 
 <div class="qa">
-<p class="q">7. 如何删除城市、清除缓存？</p>
-<p>答：在城市管理页面删除对应城市或乡镇即可；天气缓存可在“设置”页面清除。如需彻底清除全部本地数据，可在系统中删除App。</p>
+<p class="q">7. 长辈速览、语音播报如何使用？</p>
+<p>答：设置页面可以开启长辈速览大字显示模式；进入天气详情页，点击播报按钮即可调用系统语音朗读天气。语音不录音、不上传内容。</p>
 </div>
 
 <div class="qa">
-<p class="q">8. App 出现闪退或卡顿怎么办？</p>
+<p class="q">8. 如何切换温度单位、调整显示？</p>
+<p>答：在App内“设置”页面可切换摄氏度与华氏度，开启/关闭长辈速览模式。所有设置均保存在本机本地，卸载App后清除。</p>
+</div>
+
+<div class="qa">
+<p class="q">9. 如何删除城市、清除缓存？</p>
+<p>答：在城市管理页面删除对应城市或乡镇即可；天气缓存可在“设置”页面清除。<strong>注意：“卸载App”可能保留文稿数据；如需彻底清除全部本地数据，请选择系统“删除 App”</strong>。</p>
+</div>
+
+<div class="qa">
+<p class="q">10. App 出现闪退或卡顿怎么办？</p>
 <p>答：请先确认系统与 App 均已更新到最新版本，再彻底关闭后台后重新打开；若问题持续，可尝试删除后重新安装（本地城市列表会被清空，请留意）。仍无法解决，请通过下方邮箱反馈，并附上设备型号、iOS 版本、App 版本与问题描述。</p>
 </div>
 
 <div class="qa">
-<p class="q">9. 本App会收集我的个人信息吗？</p>
-<p>答：不会收集设备标识、IP 地址、机型等统计信息，也未接入任何统计或崩溃分析 SDK。定位信息仅在您授权后临时用于查询所在城市天气，不上传我方服务器；城市列表与偏好设置只保存在您的设备本地。完整说明请参阅《隐私政策》。</p>
+<p class="q">11. 本App会收集我的个人信息吗？</p>
+<p>答：不会收集设备标识、IP 地址、机型等统计信息，也未接入任何统计或崩溃分析 SDK。定位信息仅在您授权后临时用于查询天气，不上传我方服务器；城市列表、长辈速览开关与偏好设置只保存在您的设备本地。完整说明请参阅《隐私政策》。</p>
 </div>
 
 <h3>四、反馈与联系我们</h3>
@@ -87,64 +98,75 @@ ul,ol { padding-left:24px; }
 <div class="sep"></div>
 
 <h1>Support</h1>
-<p class="note">Last Updated: November 10, 2026</p>
+<p class="note">Last Updated: November 19, 2026</p>
 <p>Welcome to TianQiZhun. This page provides usage notes, FAQs and a support channel for the TianQiZhun mobile application, developed and operated by Shenzhen Huoli Zhihui Technology Co., Ltd.</p>
 
 <h3>1. About the App</h3>
-<p>TianQiZhun is a daily weather tool offering current conditions, hourly and multi-day forecasts, air quality, living indices and weather alerts for your selected cities, with city and township level search. <strong>No account registration, no subscription, no in-app purchase and no advertising pop-ups.</strong> You can search and add cities manually without granting location permission.</p>
+<p>TianQiZhun is a daily weather tool offering current conditions, hourly and multi‑day forecasts, air quality, living indices and weather alerts for your selected cities, with city and township level search. It also provides senior‑friendly large‑text mode and system‑based text‑to‑speech for weather content. <strong>No account registration, no subscription, no in‑app purchase and no advertising pop‑ups.</strong> You can search and add cities manually without granting location permission.</p>
 
 <h3>2. Permissions</h3>
 <ul>
 <li><strong>Location (Optional)</strong>: used to determine your current city. We only request “While Using the App” location, no background location. Coordinates are used solely to query weather from our weather provider and are not uploaded to our servers.</li>
-<li><strong>Notifications (Optional)</strong>: used for local weather and rain reminders. <strong>The App uses local notifications only and does not use APNs remote push.</strong> Local notifications cannot be delivered once the App is fully terminated.</li>
+<li><strong>Notifications (Optional)</strong>: used for local weather and rain reminders. <strong>The App uses local notifications only and does not use APNs remote push.</strong> Local notifications cannot be triggered for newly‑issued alerts once the App is fully terminated.</li>
 </ul>
 <p>No permission is enabled by default; prompts appear only when you use the related feature. You may revoke permissions in system settings at any time. <strong>The App does not request photo library permission, does not collect device identifiers or IP address, and does not integrate any analytics or crash SDK.</strong></p>
+<p>Text‑to‑speech uses Apple system synthesis; microphone is never used and no audio or text is sent to our servers. Senior‑mode toggle and alert‑seen markers are stored locally only on your device.</p>
 
 <h3>3. FAQ</h3>
 
 <div class="qa">
 <p class="q">1. I cannot receive weather reminders.</p>
-<p>The App supports local notifications only; remote push is not used. Please check: (a) notifications are allowed for the App in system settings; (b) the reminder switch for that city is on inside the App; (c) Focus mode or Scheduled Summary is not blocking notifications; (d) the App has not been swiped away and fully terminated — local notifications require the App to be running in the background. Weather alerts are only sent after meteorological authorities officially issue them.</p>
+<p>The App supports local notifications only; remote push is not used. Please check: (a) notifications are allowed for the App in system settings; (b) the reminder switch for that city is on inside the App; (c) Focus mode or Scheduled Summary is not blocking notifications; (d) the App has not been swiped‑away and fully terminated. New alerts cannot trigger reminders when App is terminated. Weather alerts are only generated when new warnings are fetched while App is running in foreground or background.</p>
 </div>
 
 <div class="qa">
 <p class="q">2. The detected location is not my city.</p>
-<p>Go to Settings → Privacy &amp; Security → Location Services → TianQiZhun and set permission to “While Using the App” with Precise Location enabled. Being indoors or underground may cause location offset, which is normal. A manually selected city takes priority over automatic location. In some regions the App may match an upper-level city; adding a township manually usually improves accuracy. You may also disable location and add cities manually.</p>
+<p>Go to Settings → Privacy &amp; Security → Location Services → TianQiZhun and set permission to “While Using the App” with Precise Location enabled. Being indoors or underground may cause location offset, which is normal. A manually selected city takes priority over automatic location. In some regions the App may match an upper‑level city; adding a township manually usually improves accuracy. You may also disable location and add cities manually.</p>
 </div>
 
 <div class="qa">
 <p class="q">3. Why does the weather data differ from other apps?</p>
-<p>Different products use different weather data sources, update intervals and observation stations, so minor differences are expected. Weather data is provided by a third-party weather service provider; official observations and alerts issued by meteorological authorities prevail. Forecasts are probabilistic — short-range forecasts are more reliable, while longer ranges are for reference only.</p>
+<p>Different products use different weather data sources, update intervals and observation stations, so minor differences are expected. Weather data is provided by a third‑party weather service provider; official observations and alerts issued by meteorological authorities prevail. Forecasts are probabilistic — short‑range forecasts are more reliable, while longer ranges are for reference only.</p>
 </div>
 
 <div class="qa">
 <p class="q">4. The widget does not refresh or shows blank.</p>
-<p>Widget refresh is scheduled by iOS, typically every 15 to 60 minutes; real-time updates are not possible. Open the App to refresh data first, then return to the Home Screen. Low Power Mode limits refresh frequency. If the widget stays blank, remove and re-add it.</p>
+<p>Widget refresh is scheduled by iOS, typically every 15 to 60 minutes; real‑time updates are not possible. Open the App to refresh data first, then return to the Home Screen. Low Power Mode limits refresh frequency. If the widget stays blank, remove and re‑add it.</p>
 </div>
 
 <div class="qa">
 <p class="q">5. My city list disappeared.</p>
-<p>The city list, temperature unit and notification settings are stored locally on your device and are not uploaded to servers. Uninstalling the App, clearing App data or switching devices will erase them and require re-adding. iCloud backups, if enabled, are managed by Apple under its own terms.</p>
+<p>The city list, temperature unit, notification settings and senior‑mode preference are stored locally on your device and are not uploaded to servers. Uninstalling the App, clearing App data or switching devices will erase them and require re‑adding. iCloud backups, if enabled, are managed by Apple under its own terms.</p>
 </div>
 
 <div class="qa">
-<p class="q">6. How do I change the temperature unit or display size?</p>
-<p>Open the Settings page inside the App to switch between Celsius and Fahrenheit and adjust display size. All settings are stored locally and removed when the App is uninstalled.</p>
+<p class="q">6. What does expired cache mean? Can I clear it?</p>
+<p>Local weather cache reduces repeated network requests and is valid for roughly ten minutes; entries older than 24 hours will be marked expired and require network refresh. Up to 256 seen‑alert identifiers are stored locally and auto‑cleared after seven days. You can clear all weather cache manually in App Settings.</p>
 </div>
 
 <div class="qa">
-<p class="q">7. How do I remove cities or clear the cache?</p>
-<p>Remove cities or townships in the city management page. Weather cache can be cleared on the Settings page. To erase all local data, delete the App in system settings.</p>
+<p class="q">7. How to use Senior Briefing and text‑to‑speech?</p>
+<p>You may turn on large‑text Senior Briefing in Settings. Tap the speech button on weather detail view to trigger system text‑to‑speech. No microphone access, no recording, no content uploaded to servers.</p>
 </div>
 
 <div class="qa">
-<p class="q">8. The App crashes or lags.</p>
-<p>Make sure both iOS and the App are updated, then force-close and reopen the App. If the issue persists, uninstall and reinstall (local city list will be cleared). Otherwise, contact us by email with your device model, iOS version, App version and a description of the issue.</p>
+<p class="q">8. How do I change the temperature unit or display mode?</p>
+<p>Open Settings inside the App to toggle Celsius / Fahrenheit and switch Senior Briefing on or off. Settings are local and removed on App uninstall.</p>
 </div>
 
 <div class="qa">
-<p class="q">9. Does the App collect my personal data?</p>
-<p>No device identifiers, IP address, device model or usage statistics are collected, and no analytics or crash SDK is integrated. Location is used only temporarily, after your authorization, to determine your city and is not uploaded to our servers. City list and preferences are stored locally on your device. Please refer to our Privacy Policy for the full description.</p>
+<p class="q">9. How do I remove cities or clear the cache?</p>
+<p>Remove cities or townships in city‑management page. Clear weather cache inside Settings. Note: “Offload App” may retain documents and data. To fully erase local data, choose “Delete App” in iOS system settings.</p>
+</div>
+
+<div class="qa">
+<p class="q">10. The App crashes or lags.</p>
+<p>Make sure both iOS and the App are updated, then force‑close and reopen the App. If the issue persists, uninstall and reinstall (local city list will be cleared). Otherwise, contact us by email with your device model, iOS version, App version and problem description.</p>
+</div>
+
+<div class="qa">
+<p class="q">11. Does the App collect my personal data?</p>
+<p>No device identifiers, IP address, device model or usage statistics are collected, and no analytics or crash SDK is integrated. Location is used only temporarily, after your authorization, to determine your city and is not uploaded to our servers. City list, senior‑mode toggle and preferences stay local on your device. Please refer to our Privacy Policy for full details.</p>
 </div>
 
 <h3>4. Contact Us</h3>
